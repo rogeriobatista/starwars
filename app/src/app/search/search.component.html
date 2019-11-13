@@ -1,0 +1,9 @@
+<div class="row">
+    <div class="container">
+        <div class="search-container">
+            <input type="text" [(ngModel)]="filter" class="search-input" placeholder="Search Star Wars..."
+                (keypress)="searchKeyPressed($event)" />
+            <button class="btn-search" (click)="search()">Search</button>
+        </div>
+    </div>
+</div>

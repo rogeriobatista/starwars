@@ -1,0 +1,29 @@
+.person-card {
+    display: inline-block;
+    width: 200px;
+    height: 175px;
+    margin: 10px;
+    padding-top: 10px;
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 5px;
+
+    &:hover {
+        border: 1px solid #fff;
+        cursor: pointer;
+    }
+
+    .person-card-img-top {
+        width: 150px;
+        height: 100px;
+        display: block;
+        margin: 0 auto 0 auto;
+        border-radius: 5px;
+    }
+
+    .btn-person-card {
+        display: block;
+        margin: 0 auto 0 auto !important;
+    }
+}
