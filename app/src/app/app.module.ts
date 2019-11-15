@@ -21,6 +21,10 @@ import { LoaderService } from './shared/loader/loader.service';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import VehicleService from './vehicle/vehicle.service';
 import { FooterComponent } from './shared/footer/footer.component';
+import { PlanetComponent } from './planet/planet.component';
+import PlanetService from './planet/planet.service';
+import { StarshipComponent } from './starship/starship.component';
+import StarshipService from './starship/starship.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,9 @@ import { FooterComponent } from './shared/footer/footer.component';
     HomeComponent,
     PersonComponent,
     PersonDetailsComponent,
-    VehicleComponent
+    VehicleComponent,
+    PlanetComponent,
+    StarshipComponent
   ],
   imports: [
     FormsModule,
@@ -44,7 +50,7 @@ import { FooterComponent } from './shared/footer/footer.component';
     HttpClientModule,
     NgbModule
   ],
-  providers: [PersonService, VehicleService, GoogleImageSearchService, LoaderService],
+  providers: [PersonService, VehicleService, PlanetService, StarshipService, GoogleImageSearchService, LoaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

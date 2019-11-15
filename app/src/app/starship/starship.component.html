@@ -1,0 +1,18 @@
+<div class="starship">
+    <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">{{starship.name}}</button>
+
+    <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse description">
+        <span><strong>MGLT:</strong> {{starship.MGLT}}</span><br />
+        <span><strong>Name:</strong> {{starship.name}}</span><br />
+        <span><strong>Model:</strong> {{starship.model}}</span><br />
+        <span><strong>Class:</strong> {{starship.starship_class}}</span><br />
+        <span><strong>Length:</strong> {{starship.length}}</span><br />
+        <span><strong>Cargo Capacity:</strong> {{starship.cargo_capacity}}</span><br />
+        <span><strong>Passengers:</strong> {{starship.passengers}}</span><br />
+        <span><strong>Hyperdrive Rating:</strong> {{starship.hyperdrive_rating}}</span><br />
+        <span><strong>Max Atmosphering Speed:</strong> {{starship.max_atmosphering_speed}}</span><br />
+        <span><strong>Manufacturer:</strong> {{starship.manufacturer}}</span><br />
+        <span><strong>Cost in Credits:</strong> {{starship.cost_in_credits}}</span><br />
+        <span><strong>Crew:</strong> {{starship.crew}}</span>
+    </div>
+</div>

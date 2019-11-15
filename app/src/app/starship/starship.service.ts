@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 
-export default class VehicleService {
+export default class StarshipService {
 
     constructor(private http: HttpClient) {
     }

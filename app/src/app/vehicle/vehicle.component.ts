@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, ViewChild } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Vehicle } from './vehicle.model';
 import VehicleService from './vehicle.service';
 

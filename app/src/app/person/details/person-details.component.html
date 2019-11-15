@@ -16,7 +16,7 @@
             <a class="nav-link active" data-toggle="tab" href="#planeta">Homeworld</a>
         </li>
         <li class="nav-item">
-            <a class="nav-link" data-toggle="tab" href="#naves">Spaceships</a>
+            <a class="nav-link" data-toggle="tab" href="#naves">Starships</a>
         </li>
         <li class="nav-item">
             <a class="nav-link" data-toggle="tab" href="#veiculos">Vehicles</a>
@@ -31,14 +31,13 @@
 
     <div class="tab-content">
         <div id="planeta" class="container tab-pane active"><br>
-            <h3>Terra Natal</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.</p>
+            <app-planet [planet]="homeworld"></app-planet>
         </div>
         <div id="naves" class="container tab-pane"><br>
-            <h3>Naves</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-                dolore magna aliqua.</p>
+            <div *ngIf="!hasStarships" class="mt-3"><strong>
+                    No starships
+                </strong></div>
+            <app-starship *ngFor="let starship of person.starships" [starshipUrl]="starship"></app-starship>
         </div>
         <div id="veiculos" class="container tab-pane fade"><br>
             <div *ngIf="!hasVehicles" class="mt-3"><strong>

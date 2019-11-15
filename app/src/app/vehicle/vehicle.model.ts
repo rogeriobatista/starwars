@@ -11,8 +11,8 @@ export class Vehicle {
     model: string;
     name: string;
     passengers: string;
-    pilots: [];
-    films: [];
+    pilots: string[];
+    films: string[];
     url: string;
     vehicle_class: string;
 
