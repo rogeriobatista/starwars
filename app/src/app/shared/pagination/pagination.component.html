@@ -1,0 +1,10 @@
+<div class="">
+	<ul class="pagination float-right">
+		<li class="page-item"><button class="page-link" (click)="previousPage()" [disabled]="currentPage === 1">
+				<i class="fa fa-angle-left"></i>
+			</button></li>
+		<li class="page-item"><button class="page-link">{{currentPage}}</button></li>
+		<li class="page-item"><button class="page-link" (click)="nextPage()" [disabled]="!hasNextPage"><i
+					class="fa fa-angle-right"></i></button></li>
+	</ul>
+</div>

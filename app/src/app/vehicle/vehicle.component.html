@@ -1,0 +1,16 @@
+<div class="vehicle">
+    <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">{{vehicle.name}}</button>
+
+    <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse description">
+        <span><strong>Name:</strong> {{vehicle.name}}</span><br />
+        <span><strong>Model:</strong> {{vehicle.model}}</span><br />
+        <span><strong>Class:</strong> {{vehicle.vehicle_class}}</span><br />
+        <span><strong>Length:</strong> {{vehicle.length}}</span><br />
+        <span><strong>Cargo Capacity:</strong> {{vehicle.cargo_capacity}}</span><br />
+        <span><strong>Passengers:</strong> {{vehicle.passengers}}</span><br />
+        <span><strong>Max Atmosphering Speed:</strong> {{vehicle.max_atmosphering_speed}}</span><br />
+        <span><strong>Manufacturer:</strong> {{vehicle.manufacturer}}</span><br />
+        <span><strong>Cost in Credits:</strong> {{vehicle.cost_in_credits}}</span><br />
+        <span><strong>Crew:</strong> {{vehicle.crew}}</span>
+    </div>
+</div>

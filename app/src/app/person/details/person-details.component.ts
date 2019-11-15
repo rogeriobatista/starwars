@@ -13,6 +13,7 @@ import { LoaderService } from 'src/app/shared/loader/loader.service';
 export class PersonDetailsComponent implements OnInit {
 
     person: Person = new Person();
+    hasVehicles: boolean = false;
 
     constructor(private personService: PersonService,
         private googleImageSearchService: GoogleImageSearchService,
@@ -24,6 +25,7 @@ export class PersonDetailsComponent implements OnInit {
 
         this.personService.getById(this.route.snapshot.params.id).subscribe(response => {
             this.person = response;
+            this.hasVehicles = this.person.vehicles.length > 0;
 
             this.googleImageSearchService.searchImage(this.person.name).then(images => {
                 const index = Math.floor(Math.random() * 5);

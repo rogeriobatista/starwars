@@ -1,0 +1,25 @@
+.pagination {
+    margin-right: 7px;
+    
+    .page-link {
+        background-color: transparent;
+        border: 1px solid #000;
+        color: #000;
+        padding: 10px;
+    
+        &:hover {
+            background-color: #000;
+            color: #fff;
+            cursor: pointer;
+        }
+    
+        &:disabled {
+            cursor: not-allowed;
+    
+            &:hover {
+                background-color: transparent;
+                color: #000;
+            }
+        }
+    }
+}
