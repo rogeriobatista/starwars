@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import Person from '../person/person.model';
 import PersonService from '../person/person.service';
 import { Router } from '@angular/router';
+import { environment } from 'src/environments/environment';
 
 @Component({
     selector: 'app-home',
@@ -45,7 +46,8 @@ export class HomeComponent implements OnInit {
     }
 
     openDetails(content) {
-        this.personService.setPersonDetails(this.people.find(x => x.name === content));
-        this.router.navigateByUrl('/' + content);
+        const person = this.people.find(x => x.name === content);
+        const id = person.url.replace(/\D+/g, '');
+        this.router.navigateByUrl(`/${id}`);
     }
 }

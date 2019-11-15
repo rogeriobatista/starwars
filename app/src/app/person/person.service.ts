@@ -2,21 +2,10 @@ import { HttpClient } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
-import Person from './person.model';
 
 @Injectable()
 
 export default class PersonService {
-
-    private person: Person;
-
-    getPersonDetails() {
-        return this.person;
-    }
-
-    setPersonDetails(person: Person) {
-        this.person = person;
-    }
 
     constructor(private http: HttpClient) {
     }

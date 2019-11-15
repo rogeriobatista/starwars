@@ -50,7 +50,7 @@ export default class GoogleImageSearchService {
         })
     }
 
-    googleGetMobile(images) {
+    private googleGetMobile(images) {
 
         images = Array.from(images.childNodes)
 
@@ -60,7 +60,7 @@ export default class GoogleImageSearchService {
         })
     }
 
-    googleGetDesktop(images) {
+    private googleGetDesktop(images) {
 
         images = images.childNodes[0].childNodes
 
