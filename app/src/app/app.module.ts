@@ -27,14 +27,13 @@ import { StarshipComponent } from './starship/starship.component';
 import StarshipService from './starship/starship.service';
 import { SpecieComponent } from './specie/specie.component';
 import SpecieService from './specie/specie.service';
+import { FilmComponent } from './film/film.component';
+import FilmService from './film/film.service';
+import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
+import { SharedModule } from './shared/shared.module';
 
 @NgModule({
   declarations: [
-    LoaderComponent,
-    HeaderComponent,
-    FooterComponent,
-    SearchComponent,
-    PaginationComponent,
     AppComponent,
     HomeComponent,
     PersonComponent,
@@ -42,7 +41,8 @@ import SpecieService from './specie/specie.service';
     VehicleComponent,
     PlanetComponent,
     StarshipComponent,
-    SpecieComponent
+    SpecieComponent,
+    FilmComponent
   ],
   imports: [
     FormsModule,
@@ -51,9 +51,10 @@ import SpecieService from './specie/specie.service';
     AppRoutingModule,
     Interceptor,
     HttpClientModule,
-    NgbModule
+    NgbModule,
+    SharedModule
   ],
-  providers: [PersonService, VehicleService, PlanetService, StarshipService, SpecieService, GoogleImageSearchService, LoaderService],
+  providers: [PersonService, VehicleService, PlanetService, StarshipService, SpecieService, FilmService, GoogleImageSearchService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

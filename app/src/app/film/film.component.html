@@ -1,0 +1,12 @@
+<div class="film">
+    <button class="navbar-toggler" type="button" (click)="isMenuCollapsed = !isMenuCollapsed">{{film.title}}</button>
+
+    <div [ngbCollapse]="isMenuCollapsed" class="collapse navbar-collapse description">
+        <span><strong>Title:</strong> {{film.title}}</span><br />
+        <span><strong>Episode:</strong> {{film.episode_id}}</span><br />
+        <span><strong>Opening crawl:</strong> {{film.opening_crawl}}</span><br />
+        <span><strong>Director:</strong> {{film.director}}</span><br />
+        <span><strong>Producer:</strong> {{film.producer}}</span><br />
+        <span><strong>Release date:</strong> {{film.release_date}}</span><br />
+    </div>
+</div>
