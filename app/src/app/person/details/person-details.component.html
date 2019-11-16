@@ -46,9 +46,7 @@
             <app-vehicle *ngFor="let vehicle of person.vehicles" [vehicleUrl]="vehicle"></app-vehicle>
         </div>
         <div id="especies" class="container tab-pane fade"><br>
-            <h3>Espécies</h3>
-            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
-                rem aperiam.</p>
+            <app-specie [specie]="specie"></app-specie>
         </div>
         <div id="filmes" class="container tab-pane fade"><br>
             <h3>Filmes</h3>

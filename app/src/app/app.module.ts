@@ -25,6 +25,8 @@ import { PlanetComponent } from './planet/planet.component';
 import PlanetService from './planet/planet.service';
 import { StarshipComponent } from './starship/starship.component';
 import StarshipService from './starship/starship.service';
+import { SpecieComponent } from './specie/specie.component';
+import SpecieService from './specie/specie.service';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import StarshipService from './starship/starship.service';
     PersonDetailsComponent,
     VehicleComponent,
     PlanetComponent,
-    StarshipComponent
+    StarshipComponent,
+    SpecieComponent
   ],
   imports: [
     FormsModule,
@@ -50,7 +53,7 @@ import StarshipService from './starship/starship.service';
     HttpClientModule,
     NgbModule
   ],
-  providers: [PersonService, VehicleService, PlanetService, StarshipService, GoogleImageSearchService, LoaderService],
+  providers: [PersonService, VehicleService, PlanetService, StarshipService, SpecieService, GoogleImageSearchService, LoaderService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -6,6 +6,8 @@ import GoogleImageSearchService from 'src/app/helpers/google-images/google-image
 import { LoaderService } from 'src/app/shared/loader/loader.service';
 import { Planet } from 'src/app/planet/planet.model';
 import PlanetService from 'src/app/planet/planet.service';
+import SpecieService from 'src/app/specie/specie.service';
+import Specie from 'src/app/specie/specie.model';
 
 @Component({
     selector: 'app-person-details',
@@ -18,10 +20,12 @@ export class PersonDetailsComponent implements OnInit {
     hasVehicles: boolean = false;
     hasStarships: boolean = false;
     homeworld: Planet = new Planet();
+    specie: Specie = new Specie();
 
     constructor(private personService: PersonService,
         private googleImageSearchService: GoogleImageSearchService,
         private planetService: PlanetService,
+        private specieService: SpecieService,
         private route: ActivatedRoute,
         private loaderService: LoaderService) { }
 
@@ -37,6 +41,7 @@ export class PersonDetailsComponent implements OnInit {
             this.hasStarships = this.person.starships.length > 0;
 
             this.getHomeworld();
+            this.getSpecie();
             this.getImage();
         });
     }
@@ -44,6 +49,12 @@ export class PersonDetailsComponent implements OnInit {
     getHomeworld() {
         this.planetService.get(this.person.homeworld).subscribe(response => {
             this.homeworld = response;
+        })
+    }
+
+    getSpecie() {
+        this.specieService.get(this.person.species[0]).subscribe(response => {
+            this.specie = response;
         })
     }
 
