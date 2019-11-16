@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import Person from '../person/person.model';
 import PersonService from '../person/person.service';
 import { Router } from '@angular/router';
-import { environment } from 'src/environments/environment';
 
 @Component({
     selector: 'app-home',
@@ -14,6 +13,7 @@ export class HomeComponent implements OnInit {
     people: Person[];
     currentPage: number;
     hasNextPage: boolean;
+    breadcrumbCurrentPage: string;
 
     constructor(private personService: PersonService,
         private router: Router) { }
@@ -22,6 +22,7 @@ export class HomeComponent implements OnInit {
         this.people = [];
         this.currentPage = 1;
         this.hasNextPage = true;
+        this.breadcrumbCurrentPage = '';
 
         this.getPeople();
     }
