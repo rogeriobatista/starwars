@@ -1,13 +1,13 @@
 import { TestBed, async, ComponentFixture } from '@angular/core/testing';
-import { HomeComponent } from './home.component';
+import { FilmComponent } from './film.component';
 import { SharedModule } from '../shared/shared.module';
 import { AppModule } from '../app.module';
 import { APP_BASE_HREF } from '@angular/common';
 
-describe('HomeComponent', () => {
+describe('FilmComponent', () => {
 
-    let component: HomeComponent;
-    let fixture: ComponentFixture<HomeComponent>;
+    let component: FilmComponent;
+    let fixture: ComponentFixture<FilmComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
@@ -19,10 +19,9 @@ describe('HomeComponent', () => {
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(HomeComponent);
+        fixture = TestBed.createComponent(FilmComponent);
         component = fixture.componentInstance;
-        component.currentPage = 1;
-        component.breadcrumbCurrentPage = '';
+        component.filmUrl = 'https://swapi.co/api/films/1/';
         fixture.detectChanges();
     })
 

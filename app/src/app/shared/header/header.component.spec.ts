@@ -1,13 +1,13 @@
 import { TestBed, async, ComponentFixture } from '@angular/core/testing';
-import { HomeComponent } from './home.component';
-import { SharedModule } from '../shared/shared.module';
-import { AppModule } from '../app.module';
+import { HeaderComponent } from './header.component';
+import { SharedModule } from '../../shared/shared.module';
+import { AppModule } from '../../app.module';
 import { APP_BASE_HREF } from '@angular/common';
 
-describe('HomeComponent', () => {
+describe('HeaderComponent', () => {
 
-    let component: HomeComponent;
-    let fixture: ComponentFixture<HomeComponent>;
+    let component: HeaderComponent;
+    let fixture: ComponentFixture<HeaderComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
@@ -19,10 +19,8 @@ describe('HomeComponent', () => {
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(HomeComponent);
+        fixture = TestBed.createComponent(HeaderComponent);
         component = fixture.componentInstance;
-        component.currentPage = 1;
-        component.breadcrumbCurrentPage = '';
         fixture.detectChanges();
     })
 

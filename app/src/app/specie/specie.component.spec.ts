@@ -1,13 +1,14 @@
 import { TestBed, async, ComponentFixture } from '@angular/core/testing';
-import { HomeComponent } from './home.component';
+import { SpecieComponent } from './specie.component';
 import { SharedModule } from '../shared/shared.module';
 import { AppModule } from '../app.module';
 import { APP_BASE_HREF } from '@angular/common';
+import Specie from './specie.model';
 
-describe('HomeComponent', () => {
+describe('SpecieComponent', () => {
 
-    let component: HomeComponent;
-    let fixture: ComponentFixture<HomeComponent>;
+    let component: SpecieComponent;
+    let fixture: ComponentFixture<SpecieComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
@@ -19,10 +20,9 @@ describe('HomeComponent', () => {
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(HomeComponent);
+        fixture = TestBed.createComponent(SpecieComponent);
         component = fixture.componentInstance;
-        component.currentPage = 1;
-        component.breadcrumbCurrentPage = '';
+        component.specie = new Specie();
         fixture.detectChanges();
     })
 

@@ -9,18 +9,12 @@ import PersonService from './person/person.service';
 import { HttpClientModule } from '@angular/common/http';
 import { Interceptor } from './helpers/http/interceptor.module';
 import GoogleImageSearchService from './helpers/google-images/google-images.service';
-import { HeaderComponent } from './shared/header/header.component';
-import { PaginationComponent } from './shared/pagination/pagination.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { PersonDetailsComponent } from './person/details/person-details.component';
-import { SearchComponent } from './shared/search/search.component';
 import { FormsModule } from '@angular/forms';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { LoaderComponent } from './shared/loader/loader.component';
-import { LoaderService } from './shared/loader/loader.service';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import VehicleService from './vehicle/vehicle.service';
-import { FooterComponent } from './shared/footer/footer.component';
 import { PlanetComponent } from './planet/planet.component';
 import PlanetService from './planet/planet.service';
 import { StarshipComponent } from './starship/starship.component';
@@ -29,7 +23,6 @@ import { SpecieComponent } from './specie/specie.component';
 import SpecieService from './specie/specie.service';
 import { FilmComponent } from './film/film.component';
 import FilmService from './film/film.service';
-import { BreadcrumbComponent } from './shared/breadcrumb/breadcrumb.component';
 import { SharedModule } from './shared/shared.module';
 
 @NgModule({

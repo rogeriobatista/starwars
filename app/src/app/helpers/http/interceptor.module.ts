@@ -19,12 +19,6 @@ export class HttpsRequestInterceptor implements HttpInterceptor {
         next: HttpHandler,
     ): Observable<HttpEvent<any>> {
 
-        if (req.url.search('swapi.co') === -1) {
-            req = req.clone({
-                headers: req.headers.set('Access-Control-Allow-Origin', '*').set('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept')
-            });
-        }
-
         this.loaderService.show();
         return next.handle(req).pipe(
             finalize(() => this.loaderService.hide())

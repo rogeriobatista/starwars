@@ -1,13 +1,13 @@
 import { TestBed, async, ComponentFixture } from '@angular/core/testing';
-import { HomeComponent } from './home.component';
+import { VehicleComponent } from './vehicle.component';
 import { SharedModule } from '../shared/shared.module';
 import { AppModule } from '../app.module';
 import { APP_BASE_HREF } from '@angular/common';
 
-describe('HomeComponent', () => {
+describe('VehicleComponent', () => {
 
-    let component: HomeComponent;
-    let fixture: ComponentFixture<HomeComponent>;
+    let component: VehicleComponent;
+    let fixture: ComponentFixture<VehicleComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
@@ -19,10 +19,9 @@ describe('HomeComponent', () => {
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(HomeComponent);
+        fixture = TestBed.createComponent(VehicleComponent);
         component = fixture.componentInstance;
-        component.currentPage = 1;
-        component.breadcrumbCurrentPage = '';
+        component.vehicleUrl = 'https://swapi.co/api/vehicles/1/';
         fixture.detectChanges();
     })
 

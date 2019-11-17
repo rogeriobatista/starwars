@@ -1,13 +1,14 @@
 import { TestBed, async, ComponentFixture } from '@angular/core/testing';
-import { HomeComponent } from './home.component';
+import { PlanetComponent } from './planet.component';
 import { SharedModule } from '../shared/shared.module';
 import { AppModule } from '../app.module';
 import { APP_BASE_HREF } from '@angular/common';
+import { Planet } from './planet.model';
 
-describe('HomeComponent', () => {
+describe('PlanetComponent', () => {
 
-    let component: HomeComponent;
-    let fixture: ComponentFixture<HomeComponent>;
+    let component: PlanetComponent;
+    let fixture: ComponentFixture<PlanetComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
@@ -19,10 +20,9 @@ describe('HomeComponent', () => {
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(HomeComponent);
+        fixture = TestBed.createComponent(PlanetComponent);
         component = fixture.componentInstance;
-        component.currentPage = 1;
-        component.breadcrumbCurrentPage = '';
+        component.planet = new Planet();
         fixture.detectChanges();
     })
 
