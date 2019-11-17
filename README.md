@@ -10,7 +10,7 @@ Para instalar as depenndências do projeto é necessário executar o comando `np
 
 ## Executando a aplicação
 
-Para executar a basta executar o comando `npm start`.
+Para executar a basta executar o comando `npm start` e acessar o endereço `http://localhost:4200`.
 
 ## Executando testes unitários
 
