@@ -1,9 +1,7 @@
 import { TestBed, async, ComponentFixture } from '@angular/core/testing';
 import { PlanetComponent } from './planet.component';
-import { SharedModule } from '../shared/shared.module';
-import { AppModule } from '../app.module';
-import { APP_BASE_HREF } from '@angular/common';
 import { Planet } from './planet.model';
+import { TestCommonModule } from '../helpers/tests/test-common.module';
 
 describe('PlanetComponent', () => {
 
@@ -12,10 +10,7 @@ describe('PlanetComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            imports: [SharedModule, AppModule],
-            providers: [
-                { provide: APP_BASE_HREF, useValue: '/' }
-            ]
+            imports: [TestCommonModule]
         }).compileComponents();
     }));
 

@@ -1,15 +1,12 @@
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { Injectable } from '@angular/core';
+import BaseService from '../shared/services/base.service';
 
 @Injectable()
 
-export default class FilmService {
+export default class FilmService extends BaseService {
 
-    constructor(private http: HttpClient) {
-    }
-
-    get(url: string): Observable<any> {
-        return this.http.get<any>(url);
+    constructor(protected http: HttpClient) {
+        super(http);
     }
 }

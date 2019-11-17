@@ -1,18 +1,13 @@
 import { TestBed, async, inject } from '@angular/core/testing';
 import PlanetService from './planet.service';
-import { SharedModule } from '../shared/shared.module';
-import { AppModule } from '../app.module';
-import { APP_BASE_HREF } from '@angular/common';
+import { TestCommonModule } from '../helpers/tests/test-common.module';
 
 describe('PlanetService', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            imports: [SharedModule, AppModule],
-            providers: [
-                { provide: APP_BASE_HREF, useValue: '/' },
-                PlanetService
-            ]
+            imports: [TestCommonModule],
+            providers: [PlanetService]
         }).compileComponents();
     }));
 

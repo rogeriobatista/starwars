@@ -1,8 +1,6 @@
 import { TestBed, async, ComponentFixture } from '@angular/core/testing';
 import { PersonDetailsComponent } from './person-details.component';
-import { SharedModule } from '../../shared/shared.module';
-import { AppModule } from '../../app.module';
-import { APP_BASE_HREF } from '@angular/common';
+import { TestCommonModule } from 'src/app/helpers/tests/test-common.module';
 
 describe('PersonDetailsComponent', () => {
 
@@ -11,10 +9,7 @@ describe('PersonDetailsComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            imports: [SharedModule, AppModule],
-            providers: [
-                { provide: APP_BASE_HREF, useValue: '/' }
-            ]
+            imports: [TestCommonModule]
         }).compileComponents();
     }));
 

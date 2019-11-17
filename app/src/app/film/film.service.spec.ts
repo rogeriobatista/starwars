@@ -1,16 +1,13 @@
 import { TestBed, async, inject } from '@angular/core/testing';
 import FilmService from './film.service';
-import { SharedModule } from '../shared/shared.module';
-import { AppModule } from '../app.module';
-import { APP_BASE_HREF } from '@angular/common';
+import { TestCommonModule } from '../helpers/tests/test-common.module';
 
 describe('FilmService', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            imports: [SharedModule, AppModule],
+            imports: [TestCommonModule],
             providers: [
-                { provide: APP_BASE_HREF, useValue: '/' },
                 FilmService
             ]
         }).compileComponents();

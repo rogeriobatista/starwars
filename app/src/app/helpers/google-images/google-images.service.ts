@@ -11,9 +11,6 @@ export default class GoogleImageSearchService {
 
         return new Promise((resolve, reject) => {
 
-            // https://crossorigin.me/
-            // https://cors-anywhere.herokuapp.com/
-
             this.loaderService.show();
 
             fetch(`https://cors-anywhere.herokuapp.com/https://www.google.com.ua/search?q=${query}&as_st=y&hl=pt-BR&tbs=itp:photo&tbm=isch&gbv=1&sei=yPTJXcjuAvir5OUP7-CQgAk`)
