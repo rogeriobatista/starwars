@@ -1,4 +1,4 @@
-# App
+# Star Wars
 
 Este projeto exibe uma lista com todos os personagens do Star Wars, onde é possível ver cada um deles detalhadamente.
 
